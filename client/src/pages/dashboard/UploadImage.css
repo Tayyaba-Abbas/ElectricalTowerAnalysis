@@ -1,0 +1,142 @@
+/* Main wrapper to handle full-screen positioning */
+.upload-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.2); /* Optional: semi-transparent background */
+  width: 100vw;
+  backdrop-filter: blur(10px);
+  height: 100vh;
+  z-index: 9999; /* Ensure the card is on top of everything */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  overflow: hidden;
+}
+
+/* Background overlay with a blur effect */
+.upload-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2); /* Optional semi-transparent white background */
+  backdrop-filter: blur(15px); /* Apply blur to the background */
+  z-index: 1; /* Ensure it's below the upload card */
+
+}
+
+  /* Upload card centered with clean look */
+  .upload-card,
+  .loader-card {
+    background-color: #f8f9fc;
+    border-radius: 14px;
+    padding: 30px 40px;
+    margin-top: 20px;
+    margin-left: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    width: 450px;
+    max-width: 90%;
+    z-index: 2;
+    animation: fadeIn 0.5s ease-in-out; /* Smooth fade-in effect */
+}
+/* Card title */
+.upload-card h2,
+.loader-card h2 {
+  font-size: 20px;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #002244;
+}
+
+/* Upload icon box */
+.upload-icon-box {
+  border: 2px dashed #aaa;
+  border-radius: 12px;
+  padding: 20px;
+  width: 120px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.upload-icon-box:hover {
+  border-color: #003366;
+}
+
+/* Icon style */
+.upload-svg-icon {
+  width: 60px;
+  height: 60px;
+  fill: #003366;
+  transition: transform 0.2s ease;
+  opacity: 0.9;
+}
+
+.upload-icon-box:hover .upload-svg-icon {
+  transform: scale(1.1);
+}
+
+/* Upload success message */
+.upload-success-msg {
+  color: rgb(17, 15, 33);
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+.upload-error-msg {
+  color: #d9534f; /* red-ish */
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+/* Button */
+.run-analysis-btn {
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+  background-color: #28a745;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.run-analysis-btn:hover {
+  background-color: #218838;
+}
+
+/* Progress bar */
+.progress-bar-container {
+  height: 20px;
+  width: 100%;
+  background-color: #eee;
+  border-radius: 10px;
+  margin-top: 20px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: green;
+  border-radius: 10px;
+  animation: fillProgress 15s forwards ease-in-out;
+}
+
+
+@keyframes fillProgress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}

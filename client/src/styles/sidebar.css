@@ -1,0 +1,87 @@
+/* Sidebar Container */
+.sidebar {
+    width: 20rem;
+    height: 100%;
+    top:0;
+    background-color: #343851; /* Dark Blue */
+    color: white;
+    padding: 1.25rem;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 5px;
+    left: -10px;
+}
+  .sidebar-top {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  
+}
+.profile-image {
+  width: 60px;  /* Size of the image */
+  height: 60px;  /* Make the height equal to the width */
+  border-radius: 50%;  /* Make the image round */
+  display: block;
+  aspect-ratio: 1 / 1; /* Ensures it's always square */ 
+}
+
+  /* Sidebar Title */
+  .sidebar h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+  
+
+  }
+  
+  /* Menu Items */
+  .sidebar-menu ul {
+    list-style: none;
+    padding: 1rem;
+    margin-top: 3rem;
+    
+  }
+  
+  .sidebar-menu ul li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: 1.4rem;
+    margin-left: 2rem;
+  }
+
+   
+  .sidebar-menu ul li:hover {
+    color: #99a4b4; /* Light gray on hover */
+  }
+  .bottom-menu ul{
+    margin-left: 3rem;
+    list-style-type: none;
+    margin-bottom: 1rem;
+    margin-top: 15rem;
+    font-size: 1.4rem;
+  }
+
+   
+  .sidebar-menu ul li a,
+.bottom-menu ul li a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+ 
+.sidebar-menu ul li a:hover,
+.bottom-menu ul li a:hover {
+  background-color: #ffffff;  /* lighter shade or your preferred color */
+  color: black;             /* keep text white or change if needed */
+}
+  

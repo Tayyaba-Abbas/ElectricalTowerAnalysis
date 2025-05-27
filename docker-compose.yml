@@ -1,0 +1,47 @@
+version: "3"
+
+services:
+  backend:
+    build: ./backend
+    container_name: fyp-backend
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend/uploads:/app/uploads
+      - ./backend/results:/app/results
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+    depends_on:
+      - flask-model
+  flask-model:
+    build:
+      context: ./flask_model
+      dockerfile: Dockerfile
+    container_name: fyp-model
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./backend/uploads:/app/uploads
+      - ./backend/results:/app/results
+    command: python model.py
+
+
+  
+
+  
+
+  client:
+    build: ./client
+    container_name: fyp-client
+    ports:
+      - "8080:80"  # Map container port 80 (NGINX) to host port 8080
+    stdin_open: true
+    tty: true       
+    depends_on:
+      - backend
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4

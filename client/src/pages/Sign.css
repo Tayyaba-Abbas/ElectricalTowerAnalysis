@@ -1,0 +1,150 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Container */
+.signup-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00124E;
+    align-items: center;
+}
+
+/* Left Side - Text & Image */
+.signup-left {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+.signup-text {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: start;  /* Keeps text aligned to the start */
+    max-width: 100%;  
+    /* margin-left: -90px;  Moves text slightly to the left */
+}
+
+/* Image Styling */
+.visual-image {
+    width: 170%; /* Size thoda bara kar diya */
+    max-width: 1000px; /* Max width increase ki */
+    transform: translateX(70px); /* Image ko thora right move kiya */
+}
+
+
+/* Right Side - Form */
+.signup-right {
+    width: 60%;
+    height: 100%;
+    background-color: white;
+    padding: 60px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.signup-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Social Login */
+.social-login {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.google-btn,
+.facebook-btn {
+    padding: 12px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.google-btn {
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+.facebook-btn {
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+/* Icons */
+.icon {
+    font-size: 20px;
+}
+
+.google-icon {
+    color: #DB4437; /* Google Red */
+}
+
+.facebook-icon {
+    color: #1877f2; /* Facebook Blue */
+}
+
+/* OR text */
+.or-text {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Input Fields */
+.input-field {
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+/* Signup Button */
+.signup-btn {
+    background-color: #00124E;
+    color: white;
+    padding: 12px;
+    width: 50%;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+/* Login Text */
+.login-text {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-text a {
+    color: #00124E;
+    text-decoration: none;
+    font-weight: bold;
+}
